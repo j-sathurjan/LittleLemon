@@ -7,7 +7,7 @@ class Booking(models.Model):
     bookingDate=models.DateTimeField()
     
     def __str__(self) -> str:
-        return "Name: "+self.name +", "+ str(self.bookingDate)
+        return str(self.pk) + ") Name: "+ self.name +", No of Guests: "+str(self.no_of_guest) +", BookDate: "+ str(self.bookingDate)
     
 class Menu(models.Model):
     title=models.CharField(max_length=255)
